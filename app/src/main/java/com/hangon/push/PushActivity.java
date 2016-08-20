@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,12 +57,12 @@ public class PushActivity extends Activity implements View.OnClickListener {
     private LinearLayout pushs;
    ImageView leftTopbar,rightTopbar;//标题栏的左右按钮
    TextView titleTopbar;//标题栏的内容
-
+   ImageView jjqz_btnLXfs;//电话
    ImageView jjqzUserIcon;//求助人用户头像
    TextView jjqzNickName;//求助人用户昵称
    TextView jjqzContent;//求助人发表内容
    TextView jjqzAddress;//求助人地址
-    TextView jjqzPhoneNum;//求助人电话号码
+   TextView jjqzPhoneNum;//求助人电话号码
 
     ImageView jjqzDzq;//紧急求助到这去
     ImageView jjqzLxfs;//紧急求助联系方式
@@ -100,8 +101,9 @@ public class PushActivity extends Activity implements View.OnClickListener {
             }).start();
             break;
 
-            case R.id.jjqz_phoneNum:
+            case R.id.jjqz_btnLXfs:
                 new PopupWindows(PushActivity.this, pushs);
+                Log.d("asas","asasasa");
                 break;
 
             case R.id.topbar_left:
@@ -137,10 +139,9 @@ public class PushActivity extends Activity implements View.OnClickListener {
 
             bt2.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent("android.intent.action.CALL", Uri.parse("tel:" + jjqzPhoneNum));
+                    Intent intent = new Intent("android.intent.action.CALL", Uri.parse("tel:" + jjqzPhoneNum.getText().toString().trim()));
                     startActivity(intent);
                     dismiss();
-                    finish();
                 }
             });
             bt3.setOnClickListener(new View.OnClickListener() {
@@ -164,7 +165,6 @@ public class PushActivity extends Activity implements View.OnClickListener {
         jjqzDzq= (ImageView) findViewById(R.id.jjqz_dzq);
         jjqzPhoneNum= (TextView) findViewById(R.id.jjqz_phoneNum);
         jjqzLxfs= (ImageView) findViewById(R.id.jjqz_btnLXfs);
-
         jjqzDzq.setOnClickListener(this);
         jjqzLxfs.setOnClickListener(this);
         rightTopbar.setVisibility(View.GONE);
@@ -194,8 +194,6 @@ public class PushActivity extends Activity implements View.OnClickListener {
         nickName = (String) map.get("qzrNickName");
         userIconUrl = (String) map.get("qzrUserIconUrl");
         content = (String) map.get("qzrPostContent");
-        Toast.makeText(PushActivity.this, "esxtr:"+extra, Toast.LENGTH_SHORT).show();
-        Toast.makeText(PushActivity.this, "0000000", Toast.LENGTH_SHORT).show();
       //  Toast.makeText(PushActivity.this, json, Toast.LENGTH_SHORT).show();
     }
 

@@ -924,7 +924,6 @@ public class MapMainActivity extends Activity implements View.OnClickListener, B
                     sNode = new BNRoutePlanNode( mLongtitude,mLatitude, "", null, coType);
                     eNode = new BNRoutePlanNode(endLongtitude, endLatutude, "", null, coType);
                    distance= meter(mLatitude,mLongtitude,endLatutude,endLongtitude);
-                    Toast.makeText(MapMainActivity.this,mLatitude+":"+mLongtitude+":"+endLatutude+":"+endLongtitude,Toast.LENGTH_LONG).show();
                 }
                 else if ("我的位置".equals(start)) {
                     sNode = new BNRoutePlanNode( mLongtitude,mLatitude, "", null, coType);

@@ -312,16 +312,16 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                 oks.setTitle("推荐车联网移动应用");  //最多30个字符
 
                 // text是分享文本：所有平台都需要这个字段
-                oks.setText("我正在使用车联网，大家一起来用吧！"+"http://10.163.200.124:8080/wind/img/background/ccut_znlsj.apk");  //最多40个字符
+                oks.setText("我正在使用车联网，大家一起来用吧！"+"http://111.116.20.180/wind/img/background/ccut_znlsj.apk");  //最多40个字符
 
                 //网络图片的url：所有平台
-                oks.setImageUrl("http://10.163.200.124:8080/wind/img/background/shareapp.png");//网络图片rul
+                oks.setImageUrl("http://111.116.20.180/wind/img/background/shareapp.png");//网络图片rul
 
                 // url：仅在微信（包括好友和朋友圈）中使用
-                oks.setUrl("http://10.163.200.124:8080/wind/img/background/ccut_znlsj.apk");   //网友点进链接后，可以看到分享的详情
+                oks.setUrl("http://111.116.20.180/wind/img/background/ccut_znlsj.apk");   //网友点进链接后，可以看到分享的详情
 
                 // Url：仅在QQ空间使用
-                oks.setTitleUrl("http://10.163.200.124:8080/wind/img/background/ccut_znlsj.apk");  //网友点进链接后，可以看到分享的详情
+                oks.setTitleUrl("http://111.116.20.180/wind/img/background/ccut_znlsj.apk");  //网友点进链接后，可以看到分享的详情
 
                 // 启动分享GUI
                 oks.show(getActivity());

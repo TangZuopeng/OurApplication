@@ -347,7 +347,6 @@ public class CarMiantenance extends Activity{
                     Intent intent = new Intent("android.intent.action.CALL", Uri.parse("tel:" + mianList.get(position).getTelephone()));
                     startActivity(intent);
                     dismiss();
-                    finish();
                 }
             });
             bt3.setOnClickListener(new View.OnClickListener() {

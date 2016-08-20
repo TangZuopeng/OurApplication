@@ -34,7 +34,6 @@ import com.hangon.fragment.music.MusicFragment;
 import com.hangon.fragment.order.ZnwhFragment;
 import com.hangon.fragment.userinfo.UserFragment;
 import com.hangon.push.GetLocationService;
-import com.hangon.push.QzLocationService;
 import com.hangon.weather.WeatherService;
 
 

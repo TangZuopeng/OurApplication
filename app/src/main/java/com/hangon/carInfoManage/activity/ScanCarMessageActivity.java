@@ -114,19 +114,19 @@ public class ScanCarMessageActivity extends Activity {
         car_mileage.setText(carMessageVO.getMileage() + "");
         car_gas.setText(carMessageVO.getOddGasAmount() + "");
 
-        if (carMessageVO.getIsGoodEngine() == 1) {
+        if (carMessageVO.getIsGoodEngine() == 0) {
             engine_is_good.setText("正常");
         } else {
             engine_is_good.setText("异常");
         }
 
-        if (carMessageVO.getIsGoodTran() == 1) {
+        if (carMessageVO.getIsGoodTran() == 0) {
             trans_is_good.setText("正常");
         } else {
             trans_is_good.setText("异常");
         }
 
-        if (carMessageVO.getIsGoodLight() == 1) {
+        if (carMessageVO.getIsGoodLight() == 0) {
             light_is_good.setText("正常");
         } else {
             light_is_good.setText("异常");

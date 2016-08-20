@@ -99,7 +99,7 @@ public class CarMaindetails extends Activity implements OnGetPoiSearchResultList
             @Override
             public void run() {
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -297,7 +297,6 @@ public class CarMaindetails extends Activity implements OnGetPoiSearchResultList
                     Intent intent = new Intent("android.intent.action.CALL", Uri.parse("tel:" + mCarMianPhone.getText().toString()));
                     startActivity(intent);
                     dismiss();
-                    finish();
                 }
             });
             bt3.setOnClickListener(new View.OnClickListener() {

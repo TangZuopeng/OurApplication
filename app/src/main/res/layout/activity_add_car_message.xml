@@ -11,6 +11,8 @@
         layout="@layout/topbar" />
 
     <RelativeLayout
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="5dp"
@@ -44,13 +46,16 @@
 
 
     <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+       >
 
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
@@ -229,6 +234,7 @@
 
                 <com.hangon.common.CleanableEditText
                     android:id="@+id/car_chassis_number"
+                    android:maxLength="17"
                     android:layout_width="match_parent"
                     android:layout_height="28dp"
                     android:layout_alignParentBottom="true"
@@ -294,7 +300,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_toRightOf="@+id/doortxt"
                     android:background="@drawable/editext_clgl"
-                    android:maxLength="3"
+                    android:maxLength="2"
                     android:numeric="integer"
                     android:textSize="16sp" />
 

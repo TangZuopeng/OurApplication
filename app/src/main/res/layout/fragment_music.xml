@@ -29,7 +29,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/lj_yy_003" />
+                android:src="@drawable/lj_yy_001" />
 
             <TextView
                 android:id="@+id/playModelTxt"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp"
-                android:text="随机播放"
+                android:text="顺序播放"
                 android:textColor="#019b79"
                 android:textSize="16sp" />
         </RelativeLayout>

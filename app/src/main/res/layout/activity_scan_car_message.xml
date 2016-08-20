@@ -11,6 +11,8 @@
         layout="@layout/topbar" />
 
     <RelativeLayout
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         android:id="@+id/car_message_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +55,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
 
 
         <LinearLayout

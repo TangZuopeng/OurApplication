@@ -47,7 +47,7 @@ public class ZnwhService extends Service {
     int smallIcon = R.mipmap.ic_launcher;
 
     private int isGoodEngine, isGoodTran, isGoodLight;
-    private int oldEngine = 1, oldTran = 1, oldLight = 1;
+    private int oldEngine = 0, oldTran = 0, oldLight = 0;
 
     private ZnwhInfoVO znwhInfo = new ZnwhInfoVO();
 
@@ -80,7 +80,7 @@ public class ZnwhService extends Service {
         }
 
         if (isGoodEngine != oldEngine){
-            if (znwhInfoVO.getIsGoodEngine() == 0){
+            if (znwhInfoVO.getIsGoodEngine() == 1){
                 admain.normal_notification(znwhIntent, smallIcon, "汽车智能维护", "你的汽车需要维修！",
                         "发动机出现异常！");
             }
@@ -90,7 +90,7 @@ public class ZnwhService extends Service {
             }
         }
         if (isGoodTran != oldTran){
-            if (isGoodTran == 0){
+            if (isGoodTran == 1){
                 admain.normal_notification(znwhIntent, smallIcon, "汽车智能维护", "你的汽车需要维修！",
                         "变速器出现异常！");
             }
@@ -100,7 +100,7 @@ public class ZnwhService extends Service {
             }
         }
         if (isGoodLight != oldLight){
-            if (isGoodEngine == 0){
+            if (isGoodEngine == 1){
                 admain.normal_notification(znwhIntent, smallIcon, "汽车智能维护", "你的汽车需要维修！",
                         "车灯出现异常！");
             }

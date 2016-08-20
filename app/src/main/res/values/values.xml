@@ -6,8 +6,8 @@
     </string-array>
 
     <string-array name="state">
-        <item>默认车辆</item>
         <item>普通车辆</item>
+        <item>默认车辆</item>
     </string-array>
 
     <string-array name="area">

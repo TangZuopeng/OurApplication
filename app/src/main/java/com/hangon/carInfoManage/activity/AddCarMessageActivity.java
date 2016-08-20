@@ -280,9 +280,9 @@ public class AddCarMessageActivity extends Activity {
 
         carMessageVO.setMileage(Double.parseDouble(car_mileage_edit.getText().toString()));
         carMessageVO.setOddGasAmount(Integer.parseInt(car_gas_edit.getText().toString()));
-        carMessageVO.setIsGoodEngine(engine_spinner.getSelectedItem().toString().equals("正常") ? 1 : 0);
-        carMessageVO.setIsGoodTran(trans_spinner.getSelectedItem().toString().equals("正常") ? 1 : 0);
-        carMessageVO.setIsGoodLight(light_spinner.getSelectedItem().toString().equals("正常") ? 1 : 0);
+        carMessageVO.setIsGoodEngine(engine_spinner.getSelectedItem().toString().equals("正常") ? 0 : 1);
+        carMessageVO.setIsGoodTran(trans_spinner.getSelectedItem().toString().equals("正常") ? 0 : 1);
+        carMessageVO.setIsGoodLight(light_spinner.getSelectedItem().toString().equals("正常") ? 0 : 1);
 
     }
 
@@ -317,6 +317,9 @@ public class AddCarMessageActivity extends Activity {
         map.put("mileage", carMessageVO.getMileage() + "");
         map.put("chassisNum", carMessageVO.getChassisNum());
         map.put("engineNum", carMessageVO.getEngineNum());
+
+        map.put("doorCount",carMessageVO.getDoorCount()+"");
+        map.put("seatCount",carMessageVO.getSeatCount()+"");
 
         map.put("oddGasAmount", carMessageVO.getOddGasAmount() + "");
         map.put("isGoodEngine", carMessageVO.getIsGoodEngine() + "");

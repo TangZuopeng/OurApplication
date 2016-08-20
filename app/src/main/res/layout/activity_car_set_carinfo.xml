@@ -30,8 +30,8 @@
         >
         <ImageView
             android:id="@+id/btnShou"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/lj_czs_001"
             android:text="手动添加新车辆"
             android:layout_marginTop="10dp"
@@ -45,8 +45,8 @@
 
         <ImageView
             android:id="@+id/btnSao"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:background="@drawable/lj_czs_002"
             android:layout_marginBottom="30dp"
             android:layout_alignParentBottom="true"

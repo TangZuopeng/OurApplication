@@ -21,7 +21,8 @@
             android:id="@+id/capture_mask_top"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shadow"/>
 
         <RelativeLayout
             android:id="@+id/capture_crop_view"
