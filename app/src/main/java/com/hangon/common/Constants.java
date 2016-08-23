@@ -4,7 +4,7 @@ package com.hangon.common;
  * Created by Administrator on 2016/4/2.
  */
 public class Constants {
-    //网络请求URL 10.163.200.124 10.59.3.167    邱勇腾讯云 123.207.136.35   学校服务器 111.116.20.180
+    //网络请求URL 10.163.200.124 10.59.3.167    邱勇腾讯云 123.207.136.35   学校服务器 111.116.20.180 南航寝室192.168.253.11   南航教室:172.18.126.95
     public static final String HOST_IP = "111.116.20.180";
     public static final String HOST_PORT = "";
 

@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cheshouye.api.client.WeizhangClient;
 import com.cheshouye.api.client.json.ProvinceInfoJson;
@@ -56,6 +57,10 @@ public class ProvinceList extends Activity {
 
 		lv_list = (ListView) findViewById(R.id.lv_1ist);
 
+		if(getData2() == null){
+			Toast.makeText(ProvinceList.this, "抱歉，加载失败，请重试", Toast.LENGTH_SHORT).show();
+			return;
+		}
 		mAdapter = new ListAdapter(this, getData2());
 		lv_list.setAdapter(mAdapter);
 
@@ -89,12 +94,7 @@ public class ProvinceList extends Activity {
 
 		//开通数量提示
 		TextView txtListTip = (TextView) findViewById(R.id.list_tip);
-		if(provinceList == null){
-			txtListTip.setText("车首页系统正在维护中，由此带来的不便，请您谅解！");
-		}
-		else{
-			txtListTip.setText("全国已开通"+ provinceList.size() +"个省份, 其它省将陆续开放");
-		}
+		txtListTip.setText("全国已开通"+ provinceList.size() +"个省份, 其它省将陆续开放");
 
 		for (ProvinceInfoJson provinceInfoJson : provinceList) {
 			String provinceName = provinceInfoJson.getProvinceName();

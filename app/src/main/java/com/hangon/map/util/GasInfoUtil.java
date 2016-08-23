@@ -249,7 +249,7 @@ public class GasInfoUtil implements Serializable {
             return;
         }catch (Exception e){
             e.printStackTrace();
-            Toast.makeText(context,"网络或者服务器异常,请重试!",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context,"网络或者服务器异常,请重试!",Toast.LENGTH_SHORT).show();
         }
     }
     public static List<GasInfoUtil> infos = new ArrayList<GasInfoUtil>();

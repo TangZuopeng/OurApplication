@@ -985,6 +985,7 @@ public class MapMainActivity extends Activity implements View.OnClickListener, B
             bundle.putSerializable(ROUTE_PLAN_NODE, (BNRoutePlanNode) mBNRoutePlanNode);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
 
         }
 

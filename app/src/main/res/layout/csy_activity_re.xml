@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/titbar" layout="@layout/topbar" />
+
+    <!-- 查询内容 -->
+    <LinearLayout
+        android:id="@+id/query_info"
+        android:layout_below="@id/titbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/csy_pd" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/csy_chepai_lab"
+            android:textColor="@color/csy_label" />
+
+        <TextView
+            android:id="@+id/query_chepai"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="粤B12345"
+            android:gravity="center_vertical"
+            android:textColor="@color/csy_text"
+            android:textSize="@dimen/csy_text_ts" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/csy_cxdz_lab"
+            android:textColor="@color/csy_label" />
+
+        <TextView
+            android:id="@+id/query_city"
+            android:text="南京"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/csy_text"
+            android:textSize="@dimen/csy_text_ts" />
+    </LinearLayout>
+
+    <!-- 结果标题 -->
+    <TextView
+        android:id="@+id/result_title"
+        android:text="共违章1次，计3分，罚款200元"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/query_info"
+        android:layout_marginTop="1.0dp"
+        android:padding="@dimen/csy_pd"
+        android:gravity="center_vertical"
+        android:textColor="@color/csy_label"
+        android:textSize="@dimen/csy_text_ts"
+        android:background="@android:color/white" />
+
+    <!-- 结果列表 -->
+    <LinearLayout
+        android:layout_below="@+id/result_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5.0dp"
+        android:layout_marginRight="5.0dp"
+        android:layout_marginTop="3.0dp"
+        android:layout_marginBottom="3.0dp"
+        android:padding="@dimen/csy_pd"
+        android:background="@drawable/csy_listitem_result">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/wz_time"
+                android:text="2014-8-27 09:51:00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/csy_text"
+                android:textSize="@dimen/csy_text_ts" />
+
+            <TextView
+                android:id="@+id/wz_money"
+                android:text="计3分，罚200元"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/csy_text_ts"
+                android:textColor="#ffff0000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/csy_pd">
+
+            <TextView
+                android:id="@+id/lab_address"
+                android:layout_width="@dimen/csy_label_w"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="违章地点"
+                android:textColor="@color/csy_label" />
+            <TextView
+                android:id="@+id/wz_addr"
+                android:text="测试成功"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/csy_label_w"
+                android:textColor="@color/csy_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/csy_pd">
+
+            <TextView
+                android:id="@+id/lab_info"
+                android:layout_width="@dimen/csy_label_w"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="违章行为"
+                android:textColor="@color/csy_label" />
+            <TextView
+                android:id="@+id/wz_info"
+                android:text="测试成功"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/csy_label_w"
+                android:textColor="@color/csy_text" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 没有违章记录 -->
+    <TextView
+        android:id="@+id/result_null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80.0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/query_info"
+        android:gravity="center"
+        android:text="恭喜, 没有查到违章记录！"
+        android:textColor="@color/csy_text"
+        android:textSize="@dimen/csy_title_ts"
+        android:visibility="gone" />
+
+    <!-- 查询中 -->
+    <FrameLayout
+        android:id="@+id/popLoader"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:background="#7fffffff">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35.0dp"
+            android:layout_gravity="center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="正在查询, 请稍候 ..."
+            android:textColor="@color/csy_text"
+            android:textSize="@dimen/csy_tip_ts"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -207,7 +207,7 @@ public class NotPay extends Fragment implements BaseFragmentPagerAdapter.UpdateA
                         startActivity(intent);
                         break;
                     case R.id.list_sweep_code:
-                        String URL = "htttp://" + Constants.HOST_IP + ":8080/wind/UserLogin?orderId=" + notpayList.get(position).getOrderId() + "&orderState=" + notpayList.get(position).getOrderState();
+                        String URL = "http://" + Constants.HOST_IP + "/wind/Order/SaoEwmResult?orderId=" + notpayList.get(position).getOrderId();
                         Bitmap QRcode = EncodingUtils.createQRCode(URL, 500, 500, null);
                         View view = LayoutInflater.from(getContext()).inflate(R.layout.qrcode, null);
                         TextView cusname = (TextView) view.findViewById(R.id.qr_cusname);

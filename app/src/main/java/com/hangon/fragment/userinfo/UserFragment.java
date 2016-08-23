@@ -233,7 +233,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                             message.what = UPDATE_TEXT;
                             handler.sendMessage(message);
                         }
-                    }, 200);
+                    }, 500);
                 }
                 break;
             case HomeActivity.INTENT_USERICON:

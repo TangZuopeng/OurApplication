@@ -34,7 +34,7 @@ import com.hangon.common.VolleyRequest;
 public class MainActivity extends Activity {
 
 
-    private String defaultChepai = "粤"; // 粤=广东
+    private String defaultChepai = "苏"; // 苏=江苏
 
     private TextView short_name;
     private TextView query_city;
@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("id", 1);
+                intent.putExtra("id", 1);////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////o/
                 setResult(RESULT_OK, intent);
                 MainActivity.this.finish();
             }
@@ -84,8 +84,8 @@ public class MainActivity extends Activity {
         // ********************************************************
         Log.d("初始化服务代码", "");
         Intent weizhangIntent = new Intent(this, WeizhangIntentService.class);
-        weizhangIntent.putExtra("appId", 1642);// 您的appId
-        weizhangIntent.putExtra("appKey", "5a9963b57060b40910877ff440273d5b");// 您的appKey
+        weizhangIntent.putExtra("appId", 2079);// 您的appId
+        weizhangIntent.putExtra("appKey", "68560540b38d58f20f0e76d70ec81757");// 您的appKey
         startService(weizhangIntent);
         init();
         short_name.setText(defaultChepai);
@@ -180,7 +180,7 @@ public class MainActivity extends Activity {
         String url = Constants.GET_WEIZHANG_INFO_URL + "userId=" + userId;
         VolleyRequest.RequestGet(MainActivity.this, url, "getWeizhangData", new VolleyInterface(MainActivity.this, VolleyInterface.mListener, VolleyInterface.mErrorListener) {
             @Override
-            public void onMySuccess(String result) {
+            public void onMySuccess(  String result) {
                 Log.e("getWeizhangData--result", result);
                 if (!result.equals("error")) {
                     Gson gson = new Gson();

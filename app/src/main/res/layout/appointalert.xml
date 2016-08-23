@@ -148,6 +148,7 @@
 
 
                   <TextView
+                      android:layout_marginBottom="5dp"
                       android:layout_alignParentLeft="true"
                       android:layout_marginTop="5dp"
                       android:id="@+id/appoint_order_yes"
@@ -157,21 +158,22 @@
                       android:textColor="#ffffff"
                       android:gravity="center"
                       android:textSize="16sp"
-                      android:background="@drawable/order_list_001"
+                      android:background="@drawable/order_list_002"
                       />
 
                     <TextView
+                        android:layout_marginBottom="5dp"
                         android:layout_width="80dp"
                         android:layout_height="40dp"
                         android:textColor="#ffffff"
                         android:gravity="center"
                         android:textSize="16sp"
-                        android:text="确定"
+                        android:text="取消"
                         android:layout_alignParentRight="true"
                         android:layout_marginTop="5dp"
                         android:id="@+id/appoint_order_no"
 
-                        android:background="@drawable/order_list_002"
+                        android:background="@drawable/order_list_001"
                         android:layout_marginLeft="20dp"
                         />
                 </RelativeLayout>

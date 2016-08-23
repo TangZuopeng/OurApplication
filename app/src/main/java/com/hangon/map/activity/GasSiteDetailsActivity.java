@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,7 @@ import com.hangon.common.VolleyInterface;
 import com.hangon.common.VolleyRequest;
 import com.hangon.map.util.GasInfoUtil;
 import com.hangon.map.util.JudgeNet;
+import com.hangon.order.activity.MainOrderActivity;
 import com.hangon.order.activity.PersonalInformationData;
 
 import java.math.BigDecimal;
@@ -406,6 +408,12 @@ public class GasSiteDetailsActivity extends Activity {
         topbarLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                JudgeNet judgeNet=new JudgeNet();
+                judgeNet.setStates(2);
+                Intent intent=new Intent();
+                intent.setClass(GasSiteDetailsActivity.this, MapMainActivity.class);
+                startActivity(intent);
+               ;
                 finish();
             }
         });
@@ -500,6 +508,23 @@ public class GasSiteDetailsActivity extends Activity {
         public void run() {
             dialog1.dismiss();
 
+        }
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+// 按下键盘上返回按钮
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            JudgeNet judgeNet=new JudgeNet();
+            judgeNet.setStates(2);
+            Intent intent=new Intent();
+            intent.setClass(GasSiteDetailsActivity.this, MapMainActivity.class);
+            startActivity(intent);
+
+            finish();
+            return true;
+        } else {
+            return super.onKeyDown(keyCode, event);
         }
     }
 }

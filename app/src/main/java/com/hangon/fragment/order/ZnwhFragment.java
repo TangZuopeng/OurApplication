@@ -138,7 +138,7 @@ public class ZnwhFragment extends Fragment implements View.OnClickListener {
                 ZnwhInfoVO znwhInfoVO = (ZnwhInfoVO) bundle.getSerializable("ZnwhInfo");
                 //tvUserId.setText(znwhInfoVO.getUserId()+"");
                 tvMil.setText(znwhInfoVO.getMileage() + "");
-                tvGas.setText(znwhInfoVO.getOddGasAmount() + "");
+                tvGas.setText(znwhInfoVO.getOddGasAmount() + "%");
                 if (znwhInfoVO.getIsGoodEngine() == 1) {
                     tvIsEng.setText("异常");
                 } else {

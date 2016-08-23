@@ -137,14 +137,6 @@ public class UpdateUserActivity extends Activity {
             }
         }
 
-        if (!sex.isEmpty()) {
-            if (!(sex.equals("男") && !sex.equals("女"))) {
-                Toast.makeText(UpdateUserActivity.this, "性别必须为男|女", Toast.LENGTH_SHORT).show();
-                state = false;
-                return false;
-            }
-        }
-
         if (!age.isEmpty()) {
             if (Integer.parseInt(age) <= 0 && Integer.parseInt(age) > 140) {
                 Toast.makeText(UpdateUserActivity.this, "年龄必须在0-140之间", Toast.LENGTH_SHORT).show();

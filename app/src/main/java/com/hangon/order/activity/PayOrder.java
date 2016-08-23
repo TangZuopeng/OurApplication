@@ -176,35 +176,6 @@ public class PayOrder extends Fragment implements BaseFragmentPagerAdapter.Updat
 
                 switch (v.getId()) {
                     case R.id.gaslist_payment_order:
-
-//                        if (payOrderList.get(position).getOrderState() == 1) {
-//                            String URL = "htttp://" + Constants.HOST_IP + ":8080/wind/UserLogin?orderId=" + payOrderList.get(position).getOrderId() + "&orderState=" + payOrderList.get(position).getOrderState();
-//                            Bitmap QRcode = EncodingUtils.createQRCode(URL, 500, 500, null);
-//                            View view = LayoutInflater.from(getContext()).inflate(R.layout.qrcode, null);
-//                            TextView cusname = (TextView) view.findViewById(R.id.qr_cusname);
-//                            TextView gastype = (TextView) view.findViewById(R.id.qr_gastype);
-//                            TextView gasSumPrice = (TextView) view.findViewById(R.id.qr_gassumprice);
-//                            TextView gasState = (TextView) view.findViewById(R.id.qr_state);
-//                            cusname.setText(payOrderList.get(position).getCusName());
-//                            gastype.setText(payOrderList.get(position).getGasType());
-//                            gasSumPrice.setText(payOrderList.get(position).getGasSumPrice());
-//                            ImageView QR = (ImageView) view.findViewById(R.id.qrcode_img);
-//
-//                            String tradState = "";
-//                            if (payOrderList.get(position).getOrderState() == 2) {
-//                                tradState = "已加油";
-//                            } else if (payOrderList.get(position).getOrderState() == 1) {
-//                                tradState = "已支付未加油";
-//                            } else if (payOrderList.get(position).getOrderState() == 0) {
-//                                tradState = "未支付";
-//                            }
-//                            gasState.setText(tradState);
-//
-//                            QR.setImageBitmap(QRcode);
-//                            AlertDialog.Builder builder1 = new AlertDialog.Builder(getActivity());
-//                            builder1.setView(view);
-//                            builder1.create().show();
-//                        }
                         break;
 
                     case R.id.list_sweep_code:
@@ -257,7 +228,7 @@ public class PayOrder extends Fragment implements BaseFragmentPagerAdapter.Updat
                             TextView gasState = (TextView) view.findViewById(R.id.qr_state);
                             gasSumPrice.setText(payOrderList.get(position).getGasSumPrice());
                             ImageView QR = (ImageView) view.findViewById(R.id.qrcode_img);
-                            String URL = "htttp://" + Constants.HOST_IP + ":8080/wind/UserLogin?orderId=" + payOrderList.get(position).getOrderId() + "&orderState=" + payOrderList.get(position).getOrderState();
+                            String URL = "http://" + Constants.HOST_IP + "/wind/Order/SaoEwmResult?orderId=" + payOrderList.get(position).getOrderId();
                             Bitmap QRcode = EncodingUtils.createQRCode(URL, 500, 500, null);
                             gasState.setText("已付款");
                             QR.setImageBitmap(QRcode);

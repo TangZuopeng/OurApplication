@@ -140,6 +140,10 @@ public class CarMiantenance extends Activity{
                } catch (InterruptedException e) {
                    e.printStackTrace();
                }
+               if(myLocation1==null||myLocation1.getText().toString().trim().equals("")||myLocation2==null||myLocation2.getText().toString().trim().equals("")){
+                   Toast.makeText(getApplicationContext(),"定位获取失败",Toast.LENGTH_SHORT).show();
+                   return;
+               }
                myPosition=new LatLng(Double.parseDouble(myLocation1.getText().toString().trim()),Double.parseDouble(myLocation2.getText().toString().trim()));
            }
        }).start();

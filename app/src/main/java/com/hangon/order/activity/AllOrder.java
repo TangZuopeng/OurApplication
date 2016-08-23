@@ -242,7 +242,7 @@ public class AllOrder extends Fragment implements BaseFragmentPagerAdapter.Updat
                                 tradState = "未支付";
                             }
                             gasState.setText(tradState);
-                            String URL = "htttp://" + Constants.HOST_IP + ":8080/wind/UserLogin?orderId=" + allOrderList.get(position).getOrderId() + "&orderState=" + allOrderList.get(position).getOrderState();
+                            String URL = "http://" + Constants.HOST_IP + "/wind/Order/SaoEwmResult?orderId=" + allOrderList.get(position).getOrderId();
                             Bitmap QRcode = EncodingUtils.createQRCode(URL, 500, 500, null);
                             cusname.setText(allOrderList.get(position).getCusName());
                             gastype.setText(allOrderList.get(position).getGasType());
@@ -308,7 +308,7 @@ public class AllOrder extends Fragment implements BaseFragmentPagerAdapter.Updat
                                 tradState = "未支付";
                             }
                             gasState.setText(tradState);
-                            String URL = "htttp://" + Constants.HOST_IP + ":8080/wind/UserLogin?orderId=" + allOrderList.get(position).getOrderId() + "&orderState=" + allOrderList.get(position).getOrderState();
+                            String URL = "http://" + Constants.HOST_IP + "/wind/Order/SaoEwmResult?orderId=" + allOrderList.get(position).getOrderId();
                             Bitmap QRcode = EncodingUtils.createQRCode(URL, 500, 500, null);
                             cusname.setText(allOrderList.get(position).getCusName());
                             gastype.setText(allOrderList.get(position).getGasType());

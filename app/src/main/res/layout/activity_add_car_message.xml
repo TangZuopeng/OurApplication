@@ -288,7 +288,7 @@
                     android:layout_height="30dp"
                     android:layout_toRightOf="@+id/door_count"
                     android:layout_alignParentBottom="true"
-                    android:text="门数"
+                    android:text="门"
                     android:textSize="16sp" />
 
                 <EditText
@@ -309,7 +309,7 @@
                     android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_toRightOf="@+id/seat_count"
-                    android:text="座位数"
+                    android:text="座位"
                     android:textSize="16sp" />
             </RelativeLayout>
 
